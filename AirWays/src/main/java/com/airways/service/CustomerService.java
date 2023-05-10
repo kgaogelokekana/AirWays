@@ -25,6 +25,10 @@ public class CustomerService {
 		return repo.findById(id).orElseThrow();
 	}
 	
+	public Customer findOneEmail(String email) {
+		return repo.findByEmail(email);
+	}
+	
 	public void addCustomer(Customer customer) {
 		repo.save(customer);
 	}

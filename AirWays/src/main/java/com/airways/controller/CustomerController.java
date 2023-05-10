@@ -37,6 +37,11 @@ public class CustomerController {
 		return service.findOneById(id);
 	}
 	
+	@GetMapping("customer/email/{email}")
+	public Customer getCustomerByEmail(@PathVariable(name = "email") String email) {
+		return service.findOneEmail(email);
+	}
+	
 	@PutMapping("/customers/{id}")
 	public void updateCustomer(@PathVariable int id,@RequestBody Customer easyflight) {
 		 service.updateCustomer(id, easyflight);
