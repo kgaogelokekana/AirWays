@@ -37,7 +37,7 @@ public class CustomerController {
 		return service.findOneById(id);
 	}
 	
-	@GetMapping("customer/email/{email}")
+	@GetMapping("customers/email/{email}")
 	public Customer getCustomerByEmail(@PathVariable(name = "email") String email) {
 		return service.findOneEmail(email);
 	}
